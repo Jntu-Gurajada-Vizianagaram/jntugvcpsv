@@ -1,0 +1,453 @@
+{
+  "institutionalProfile": {
+    "status": "Constituent College of JNTU-GV",
+    "parentUniversity": "Jawaharlal Nehru Technological University - Gurajada Vizianagaram",
+    "location": "Dwarapudi, Vizianagaram, Andhra Pradesh - 535003",
+    "domain": "jntugvcpsv.jntugv.edu.in",
+    "approvals": "Approved by Pharmacy Council of India (PCI), New Delhi",
+    "established": "2025",
+    "counsellingCode": "JNVPSF",
+    "phone": "8977817999",
+    "email": "pharmacy@jntugv.edu.in",
+    "hostel": "Residential Facilitation for Male & Female Students",
+    "logo": "/logo512.png",
+    "about": "Established in 2025, the JNTU-GV College of Pharmaceutical Sciences, Vizianagaram, stands as a premier constituent institution dedicated to advancing pharmaceutical education, interdisciplinary research, and clinical excellence. We are committed to nurturing ethically grounded and professionally competent pharmaceutical scientists for the global healthcare landscape.",
+    "vision": "To emerge as a global epicenter for pharmaceutical excellence, fostering innovation, superior pedagogical standards, and high-impact research for the betterment of society.",
+    "mission": "To deliver a comprehensive and evolving curriculum in pharmaceutical sciences that integrates theoretical rigor with practical proficiency; to spearhead research in drug discovery and healthcare technologies; to cultivate strategic industry-academia partnerships; and to ensure the holistic professional development of our student community."
+  },
+  "academicPrograms": [
+    {
+      "name": "Bachelor of Pharmacy (B.Pharm)",
+      "duration": "4 Years (8 Semesters)",
+      "status": "Admissions Ongoing",
+      "note": "Admission to the undergraduate program is strictly regulated through EAPCET rankings in accordance with the Council and University statutes."
+    },
+    {
+      "name": "Postgraduate Studies (M.Pharm)",
+      "duration": "2 Years",
+      "status": "Commencing Shortly",
+      "note": "Advanced specializations in Pharmaceutics and Pharmaceutical Analysis are proposed for upcoming academic sessions."
+    }
+  ],
+  "governanceFramework": [
+    {
+      "title": "Institutional Constituent Status",
+      "description": "Recognized as a premier constituent college of JNTU-GV, operating under the regulatory oversight of PCI, New Delhi."
+    },
+    {
+      "title": "Admissions & Statutory Compliance",
+      "description": "Admissions are merit-based, determined by EAPCET rankings and adherence to the State Council of Higher Education guidelines."
+    },
+    {
+      "title": "Infrastructure & Research Facilities",
+      "description": "State-of-the-art laboratory infrastructure, specialized research wings, and residential facilities designed to foster an academic ecosystem."
+    },
+    {
+      "title": "Governance & Transparency",
+      "description": "Committed to public accountability through the publication of mandatory disclosures, administration structures, and academic frameworks."
+    }
+  ],
+  "mandatoryDisclosures": [
+    {
+      "title": "1. Institutional Identity & Accreditation",
+      "items": [
+        "Official nomenclature and university affiliation",
+        "Constituency status under the JNTU-GV University Act",
+        "PCI Approval and Sanctioned Intake documentation",
+        "Contact coordinates for administrative offices"
+      ]
+    },
+    {
+      "title": "2. Regulatory Approvals & Certifications",
+      "items": [
+        "Pharmacy Council of India (PCI) Approval Letter",
+        "University Affiliation & Constituent Orders",
+        "EAPCET Counselling Code: JNVPSF",
+        "Statutory compliance for sanctioned student intake"
+      ]
+    },
+    {
+      "title": "3. University Leadership & Administration",
+      "items": [
+        "Hon'ble Chancellor: Shri Justice(Retd.) S. Abdul Nazeer",
+        "Hon'ble Vice Chancellor: Prof. V V Subba Rao",
+        "Registrar: Prof. D. Rajyalakshmi",
+        "Institutional Governing Body and Academic Council"
+      ]
+    },
+    {
+      "title": "4. Academic Curriculum & Framework",
+      "items": [
+        "Comprehensive B.Pharmacy syllabus as per PCI norms",
+        "Eligibility criteria for undergraduate and lateral entry admissions",
+        "Evaluation methodology and academic calendar",
+        "Industry-integrated learning modules and internships"
+      ]
+    },
+    {
+      "title": "5. Faculty Excellence & Research Repository",
+      "items": [
+        "Distinguished faculty roster with specialized expertise",
+        "Publication records and research focus areas",
+        "Faculty development programs and academic appointments",
+        "Administrative roles and departmental responsibilities"
+      ]
+    },
+    {
+      "title": "6. Campus Amenities & Infrastructure",
+      "items": [
+        "Advanced instrumentation and formulation laboratories",
+        "Digital library repository and ICT-enabled classrooms",
+        "Boys' and Girls' residential facilities within the campus",
+        "Student health, wellness, and transport services"
+      ]
+    }
+  ],
+  "complianceAudit": [
+    {
+      "item": "PCI Regulatory Statement",
+      "status": "Verified & Published",
+      "placement": "Institutional Portfolio / Regulatory Disclosures"
+    },
+    {
+      "item": "Admissions Eligibility Protocol",
+      "status": "Verified & Published",
+      "placement": "Admissions Information"
+    },
+    {
+      "item": "Fee Structure & Financial Disclosures",
+      "status": "Expansion in Progress",
+      "placement": "Finance / Admissions"
+    },
+    {
+      "item": "Anti-Ragging and Grievance Charters",
+      "status": "Expansion in Progress",
+      "placement": "Student Welfare"
+    },
+    {
+      "item": "Executive Roster and Statutory Orders",
+      "status": "Expansion in Progress",
+      "placement": "Administration / Governance"
+    }
+  ],
+  "studentWelfareSupport": [
+    {
+      "title": "Anti-Ragging Vigilance",
+      "description": "A zero-tolerance policy environment supported by a statutory committee, ensuring a safe and inclusive campus for all scholars."
+    },
+    {
+      "title": "Ombudsman & Grievance Redressal",
+      "description": "A formalized mechanism for the resolution of academic and administrative concerns for students, faculty, and stakeholders."
+    },
+    {
+      "title": "Residential Life & Support",
+      "description": "In-campus residential facilities for boys and girls, governed by strict codes of conduct and student wellbeing protocols."
+    },
+    {
+      "title": "Professional Development & Placement",
+      "description": "Strategic initiatives to bridge industry-academia gaps, facilitating internships and career opportunities in the global pharmacy sector."
+    }
+  ],
+  "institutionalNotices": [
+    {
+      "date": "Admission Cycle 2025",
+      "title": "B.Pharmacy Admissions Open",
+      "summary": "Prospective students are invited to apply for the B.Pharmacy program. Admissions are processed via EAPCET counseling protocols."
+    },
+    {
+      "date": "Staff Recruitment",
+      "title": "Faculty Appointment Walk-in Interviews",
+      "summary": "The institution is recruiting specialized faculty for pharmaceutical sciences. Please refer to the official notification for criteria."
+    },
+    {
+      "date": "Campus Facilities",
+      "title": "Residential Hall Accreditations",
+      "summary": "Official confirmation of the operational readiness of boys' and girls' residential halls for the current academic year."
+    }
+  ],
+  "admissionKeyData": [
+    {
+      "title": "Counselling Code",
+      "value": "JNVPSF"
+    },
+    {
+      "title": "Program Offered",
+      "value": "B.Pharmacy"
+    },
+    {
+      "title": "Sanctioned Intake",
+      "value": "100"
+    },
+    {
+      "title": "Admission Criteria",
+      "value": "EAPCET Merit Ranking"
+    }
+  ],
+  "universityLeadership": [
+    {
+      "role": "Hon'ble Chancellor",
+      "name": "Shri Justice(Retd.) S. Abdul Nazeer",
+      "detail": "Governor of Andhra Pradesh"
+    },
+    {
+      "role": "Hon'ble Vice Chancellor",
+      "name": "Prof. V V Subba Rao",
+      "detail": "Vice Chancellor, JNTU-GV"
+    },
+    {
+      "role": "Registrar",
+      "name": "Prof. D. Rajya Lakshmi",
+      "detail": "Registrar, JNTU-GV"
+    }
+  ],
+  "contactInventory": [
+    {
+      "label": "Mailing Address",
+      "value": "Dwarapudi, Vizianagaram, Andhra Pradesh - 535003, India"
+    },
+    {
+      "label": "Administrative Desk",
+      "value": "+91 8977817999"
+    },
+    {
+      "label": "Email Correspondence",
+      "value": "pharmacy@jntugv.edu.in"
+    },
+    {
+      "label": "Official Portal",
+      "value": "https://jntugvcpsv.jntugv.edu.in"
+    },
+    {
+      "label": "Campus Residence",
+      "value": "Integrated Boys & Girls Hostels"
+    }
+  ],
+  "academicLinks": [
+    {
+      "label": "Regulatory Disclosures",
+      "href": "/mandatory-disclosure"
+    },
+    {
+      "label": "Admissions Desk",
+      "href": "/admissions"
+    },
+    {
+      "label": "Faculty Roster",
+      "href": "/faculty"
+    },
+    {
+      "label": "Student Welfare",
+      "href": "/student-support"
+    },
+    {
+      "label": "Academic Facilities",
+      "href": "/facilities"
+    },
+    {
+      "label": "Connect with Us",
+      "href": "/contact"
+    },
+    {
+      "label": "Library & Resources",
+      "href": "/academics"
+    }
+  ],
+  "academicDepartments": [
+    {
+      "title": "Dept. of Pharmaceutics",
+      "description": "Specialized in advanced drug delivery systems, industrial pharmacy protocols, and dosage form optimization."
+    },
+    {
+      "title": "Dept. of Pharmaceutical Analysis",
+      "description": "Focused on modern analytical techniques, chromatographic validation, and regulatory quality control standards."
+    },
+    {
+      "title": "Dept. of Pharmacology",
+      "description": "Dedicated to investigating drug-target interactions, preclinical evaluations, and therapeutic toxicology."
+    },
+    {
+      "title": "Dept. of Pharmaceutical Chemistry",
+      "description": "Centered on medicinal chemistry, synthetic organic pathways, and molecular docking studies for drug discovery."
+    },
+    {
+      "title": "Dept. of Pharmacognosy",
+      "description": "Exploring bioactive natural products, herbal standardization, and traditional medicine modernization."
+    },
+    {
+      "title": "Dept. of Pharmacy Practice",
+      "description": "Emphasizing clinical pharmacy excellence, patient safety protocols, and hospital-based healthcare delivery."
+    }
+  ],
+  "campusInfrastructure": [
+    {
+      "title": "Central Knowledge Resource",
+      "description": "A comprehensive repository of pharmaceutical literature, e-journals, and digital academic archives."
+    },
+    {
+      "title": "Diagnostic & Formulation Labs",
+      "description": "Advanced subject-specific laboratories equipped for experimental research and practical proficiency."
+    },
+    {
+      "title": "Residential Infrastructure",
+      "description": "Secure and well-governed residential halls ensuring conducive learning environments for students."
+    },
+    {
+      "title": "Information & ICT Services",
+      "description": "Integrated campus networking, high-speed connectivity, and digital learning management systems."
+    },
+    {
+      "title": "Academic Seminar Halls",
+      "description": "Specialized venues for international symposia, workshops, and high-level academic deliberations."
+    },
+    {
+      "title": "Student Support Ecosystem",
+      "description": "Holistic campus services including administrative aid, wellbeing support, and extracurricular coordination."
+    }
+  ],
+  "institutionalDirectory": [
+    {
+      "title": "Academic Governance",
+      "description": "Explore the leadership, administrative structure, and institutional governing body of the college.",
+      "href": "/administration"
+    },
+    {
+      "title": "Academics & Research",
+      "description": "Detailed academic programs, regulatory frameworks, and scholarly research initiatives.",
+      "href": "/academics"
+    },
+    {
+      "title": "Departmental Portfolios",
+      "description": "Specific academic divisions and specialized subject-matter expertise within the institution.",
+      "href": "/departments"
+    },
+    {
+      "title": "Campus Amenities",
+      "description": "Overview of state-of-the-art facilities, libraries, and student-centric support systems.",
+      "href": "/facilities"
+    },
+    {
+      "title": "Faculty Excellence",
+      "description": "Professional profiles of our distinguished academic staff and their research expertise.",
+      "href": "/faculty"
+    }
+  ],
+  "facultyRepository": [
+    {
+      "name": "Dr. K. Atchuta Kumar",
+      "slug": "dr-k-atchuta-kumar",
+      "designation": "Principal In-Charge",
+      "department": "Department of Pharmaceutical Sciences",
+      "experience": "19 years in Pedagogical Excellence & Pharmacy Research",
+      "email": "Dratchuta99@gmail.com",
+      "image": "/profiles/Dr.K.Atchuta Kumar.jpg",
+      "profile": "Dr. K. Atchuta Kumar leads the institution with a distinguished record in pharmaceutical education and research, steering the college towards academic and clinical prominence."
+    },
+    {
+      "name": "Dr. Swathi Nageswara",
+      "slug": "dr-swathi-nageswara",
+      "designation": "Assistant Professor",
+      "department": "Department of Pharmaceutical Sciences",
+      "experience": "8 years in Pharmaceutical Research & Teaching",
+      "email": "swathinageswara@gmail.com",
+      "image": "/profiles/Dr.Swathi Nageswara.jpg",
+      "profile": "Dr. Swathi Nageswara specializes in advanced pharmaceutical studies, contributing significantly to the academic growth and research output of the department."
+    },
+    {
+      "name": "Mr. Sheik Jakir Hussain Mustaq",
+      "slug": "mr-sheik-jakir-hussain-mustaq",
+      "designation": "Assistant Professor",
+      "department": "Department of Pharmaceutical Sciences",
+      "experience": "9.8 years in Industrial Operations & Academia",
+      "email": "jakirhussian.sheik@gmail.com",
+      "image": "/profiles/Mr.Sheik Jakir Hussain Mustaq.jpg",
+      "profile": "Mr. Sheik Jakir Hussain Mustaq integrates industrial insights with academic rigor, preparing students for professional excellence in the pharmaceutical sector."
+    },
+    {
+      "name": "Mrs. G. Vasavi",
+      "slug": "mrs-g-vasavi",
+      "designation": "Assistant Professor",
+      "department": "Department of Pharmaceutical Sciences",
+      "experience": "8 years in Academic Mentorship & Instruction",
+      "email": "vasavigokavarapu999@gmail.com",
+      "image": "/profiles/Mrs.G.Vasavi.jpg",
+      "profile": "Mrs. G. Vasavi is dedicated to student mentorship and instructional excellence, focusing on the core foundations of pharmaceutical sciences."
+    }
+  ],
+  "principalsMessage": {
+    "title": "Principal's Desk",
+    "message": "The JNTU-GV College of Pharmaceutical Sciences is dedicated to the pursuit of excellence in pharmacy education, fostering an environment of academic discipline and research innovation. Our mission is to cultivate a generation of healthcare professionals who are not only technically proficient but also ethically committed to the advancement of human health."
+  },
+  "scholarlyDownloads": [
+    {
+      "title": "Academic Syllabus: B.Pharm",
+      "file": "/downloads/Syllabus_B_Pharm.pdf",
+      "description": "Standardized academic curriculum for the Bachelor of Pharmacy program (PCI compliant)."
+    }
+  ],
+  "institutionalGallery": [
+    {
+      "title": "Inaugural Commemoration",
+      "image": "/gallery/inauguration-1.jpeg",
+      "category": "Corporate Events"
+    },
+    {
+      "title": "University Convocation Visuals",
+      "image": "/gallery/inauguration-2.jpeg",
+      "category": "Corporate Events"
+    },
+    {
+      "title": "Republic Day Observance",
+      "image": "/gallery/republic-day-1.jpg",
+      "category": "National Observances"
+    },
+    {
+      "title": "Institutional Gathering",
+      "image": "/gallery/republic-day-2.jpg",
+      "category": "National Observances"
+    },
+    {
+      "title": "International Women's Day",
+      "image": "/gallery/womens-day-1.jpeg",
+      "category": "Campus Culture"
+    },
+    {
+      "title": "Socio-Cultural Activities",
+      "image": "/gallery/womens-day-2.jpeg",
+      "category": "Campus Culture"
+    },
+    {
+      "title": "Academic Symposium - Eclectique",
+      "image": "/gallery/eclectique-1.jpg",
+      "category": "Scholarly Events"
+    },
+    {
+      "category": "Scholarly Events",
+      "image": "/gallery/eclectique-2.jpg",
+      "title": "Student Technical Festivities"
+    },
+    {
+      "title": "Library Archive Facility",
+      "image": "/gallery/library-1.jpg",
+      "category": "Infrastructure"
+    },
+    {
+      "title": "Residential Hall Accommodations",
+      "image": "/gallery/hostel-1.jpg",
+      "category": "Infrastructure"
+    },
+    {
+      "title": "Athletic & Fitness Arena",
+      "image": "/gallery/sports-1.jpg",
+      "category": "Infrastructure"
+    },
+    {
+      "title": "Pharmacy Campus Panoramics",
+      "image": "/gallery/pharmacy-campus.jpeg",
+      "category": "Campus Environment"
+    }
+  ],
+  "metaData": {
+    "lastInstitutionalUpdate": "2026-04-22T15:00:00Z",
+    "verifiedBy": "Institutional CMS Team"
+  }
+}
