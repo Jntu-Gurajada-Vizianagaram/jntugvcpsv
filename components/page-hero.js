@@ -4,10 +4,10 @@ export function PageHero({ title, description, breadcrumbs = [] }) {
   return (
     <section className="page-hero">
       <div className="shell" style={{ position: 'relative', zIndex: 1 }}>
-        <nav className="breadcrumbs" aria-label="Breadcrumb" style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.82rem', marginBottom: '1.25rem' }}>
-          <Link href="/" style={{ color: 'rgba(255,255,255,0.65)' }}>Home</Link>
+        <nav className="breadcrumbs" aria-label="Breadcrumb">
+          <Link href="/">Home</Link>
           {breadcrumbs.map((item) => (
-            <span key={item} style={{ color: 'rgba(255,255,255,0.9)' }}>{item}</span>
+            <span key={item}>{item}</span>
           ))}
         </nav>
         <div className="page-hero-card">

@@ -8,14 +8,13 @@ import { getSectionNav, navGroups, publicNav, utilityLinks } from "@/lib/navigat
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const [openGroup, setOpenGroup] = useState("Institution");
+  const [openGroup, setOpenGroup] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const sectionNav = getSectionNav(pathname);
 
   useEffect(() => {
     const handleScroll = () => {
-      setOpen(false);
       setScrolled(window.scrollY > 40);
     };
     window.addEventListener("scroll", handleScroll);
@@ -80,7 +79,7 @@ export function SiteHeader() {
             onClick={() => setOpen((v) => !v)}
           >
             <span className="menu-icon"></span>
-            {open ? "Close Menu" : "Explore Contents"}
+            {open ? "Close" : "Menu"}
           </button>
 
           <nav className={`main-nav ${open ? "open" : ""}`}>
@@ -120,13 +119,11 @@ export function SiteHeader() {
                     {group.label}
                     <span>{openGroup === group.label ? "−" : "+"}</span>
                   </button>
-                  {openGroup === group.label && (
-                    <div className="mobile-panel">
-                      {group.items.map(item => (
-                        <Link key={item.label} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>
-                      ))}
-                    </div>
-                  )}
+                  <div className={`mobile-panel ${openGroup === group.label ? "open" : ""}`}>
+                    {group.items.map(item => (
+                      <Link key={item.label} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>

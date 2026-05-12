@@ -97,30 +97,30 @@ export default async function HomePage() {
         <section className="section">
           <div className="shell">
             <div className="content-card-block card-institutional">
-              <div className="split-info" style={{ display: "grid", gridTemplateColumns: "minmax(auto, 280px) 1fr", gap: "3rem", alignItems: "center" }}>
+              <div className="principal-desk-layout">
                 <div className="principal-portrait">
                   <Image
                     src="/profiles/Dr.K.Atchuta Kumar.jpg"
                     alt="Principal"
                     width={280}
                     height={340}
-                    style={{ borderRadius: "16px", objectFit: "cover", boxShadow: "var(--shadow)" }}
+                    className="principal-img"
                   />
                 </div>
                 <div>
                   <span className="section-tag">From the Principal's Desk</span>
-                  <h2 style={{ fontSize: "2rem", margin: "0.5rem 0" }}>Visionary Leadership</h2>
-                  <p className="lead" style={{ fontSize: "1.1rem", fontStyle: "italic", color: "var(--navy)" }}>
+                  <h2 className="principal-title">Visionary Leadership</h2>
+                  <p className="principal-lead">
                     "Our mission is to foster a transformative learning environment where academic excellence meets ethical clinical practice."
                   </p>
-                  <p style={{ margin: "1rem 0" }}>
+                  <p className="principal-text">
                     At the College of Pharmaceutical Sciences, we provide a multidisciplinary curriculum that integrates theoretical rigor with advanced practical inquiry. Our goal is to empower the next generation of pharmacists with the skills necessary to excel in the global healthcare ecosystem.
                   </p>
-                  <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginTop: "2rem" }}>
+                  <div className="principal-actions">
                     <Link href="/principal" className="button button-primary">Examine Vision Statement</Link>
-                    <div>
-                      <strong style={{ display: "block" }}>Dr. K. Atchuta Kumar</strong>
-                      <span className="muted" style={{ fontSize: "0.85rem" }}>Principal In-Charge, JNTU-GV CPSV</span>
+                    <div className="principal-signature">
+                      <strong>Dr. K. Atchuta Kumar</strong>
+                      <span className="muted">Principal In-Charge, JNTU-GV CPSV</span>
                     </div>
                   </div>
                 </div>
