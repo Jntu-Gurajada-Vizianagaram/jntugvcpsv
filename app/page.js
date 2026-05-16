@@ -45,7 +45,7 @@ export default async function HomePage() {
             <div className="hero-content">
               <div className={styles.heroBadge}>Established 2025 • PCI Approved</div>
               <h1 className={styles.heroTitle}>
-                <span className={styles.textGradient}>JNTU-GV College of</span>
+                JNTU-GV College of
                 <br /> Pharmaceutical Sciences
               </h1>
               <p className={styles.heroLead}>
@@ -60,7 +60,7 @@ export default async function HomePage() {
                 </Link>
               </div>
             </div>
-            
+
             <div className={styles.heroVisual}>
               <div className={styles.heroImageWrapper}>
                 <Image
@@ -200,7 +200,7 @@ export default async function HomePage() {
               <h2>Leadership & Statutory Administration</h2>
               <div className={styles.headingUnderline}></div>
             </div>
-            
+
             <div className="leadership-grid">
               {universityLeadership.map((leader, i) => (
                 <article key={i} className="leader-card-box">
@@ -233,7 +233,7 @@ export default async function HomePage() {
               <h2>Our Academic Programs</h2>
               <div className={styles.headingUnderline}></div>
             </div>
-            
+
             <div className={`${styles.programsGrid} ${styles.marginTopLg}`}>
               {academicPrograms.map((prog, i) => (
                 <div key={i} className={`${styles.programCard} ${styles.hoverLift}`}>
