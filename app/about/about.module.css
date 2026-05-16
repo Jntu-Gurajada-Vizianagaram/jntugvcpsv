@@ -1,0 +1,259 @@
+/* Premium Institutional Overview Styles */
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .layoutGrid {
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+  }
+}
+
+/* Sidebar Styling */
+.sidebarCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 100px;
+}
+
+.sidebarTitle {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.linkItem {
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.linkItem::before {
+  content: "→";
+  color: var(--gold);
+  font-weight: bold;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.2s ease;
+}
+
+.linkItem:hover {
+  color: var(--primary-deep);
+  transform: translateX(5px);
+}
+
+.linkItem:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Main Content Styling */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.narrativeCard {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  position: relative;
+  overflow: hidden;
+}
+
+.narrativeCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary-deep), var(--gold));
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  color: var(--primary-deep);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-serif);
+}
+
+.leadText {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.subText {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Vision & Mission Grid */
+.visionMissionGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .visionMissionGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.vmCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.vmCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.1);
+}
+
+.vmIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.vmTitle {
+  font-size: 1.4rem;
+  color: var(--primary-deep);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.visionText {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--navy);
+}
+
+.missionText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* Identity Card */
+.identityCard {
+  grid-column: 1 / -1;
+  background: var(--primary-deep);
+  color: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.identityCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.identityTitle {
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.identityMain {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.identityDivider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.identityLocation {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Governance Divisions */
+.divisionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.divisionCard {
+  background: var(--bg-soft);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.divisionCard:hover {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.divisionTitle {
+  font-size: 1.1rem;
+  color: var(--primary-deep);
+  margin-bottom: 0.5rem;
+}
+
+.divisionDesc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}

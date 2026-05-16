@@ -3,6 +3,7 @@ import Image from "next/image";
 import { unstable_noStore as noStore } from "next/cache";
 import { getSiteContent } from "@/lib/cms";
 import { SiteShell } from "@/components/site-shell";
+import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
 
@@ -15,77 +16,84 @@ export default async function HomePage() {
     admissionKeyData,
     institutionalNotices,
     universityLeadership,
-    institutionalDirectory,
-    quickLinks,
-    metaData
+    academicPrograms,
+    institutionalGallery
   } = content;
 
   return (
     <SiteShell content={content}>
       <main>
-        {/* News Marquee */}
-        <div className="flash-news-bar card-institutional">
+        {/* Sleek News Marquee */}
+        <div className={styles.glassPanel}>
           <div className="shell flash-container">
-            <span className="flash-label">Statutory Bulletins</span>
+            <span className={`flash-label ${styles.pulseDot}`}>Statutory Bulletins</span>
             <div className="marquee-wrapper">
               <div className="marquee-text">
                 {institutionalNotices.map((n, i) => (
-                  <span key={i}>• {n.title} &nbsp;&nbsp;&nbsp;</span>
+                  <span key={i} className={styles.marqueeItem}>
+                    <span className={styles.marqueeBullet}>•</span> {n.title}
+                  </span>
                 ))}
               </div>
             </div>
           </div>
         </div>
 
-        <section className="landing-hero">
-          <div className="shell landing-grid">
-            <div className="landing-main">
-              <h1>JNTU-GV College of Pharmaceutical Sciences</h1>
-              <p className="lead">
+        {/* Premium Hero Section */}
+        <section className={styles.heroPremium}>
+          <div className={`shell ${styles.heroGridPremium}`}>
+            <div className="hero-content">
+              <div className={styles.heroBadge}>Established 2025 • PCI Approved</div>
+              <h1 className={styles.heroTitle}>
+                <span className={styles.textGradient}>JNTU-GV College of</span>
+                <br /> Pharmaceutical Sciences
+              </h1>
+              <p className={styles.heroLead}>
                 Elevating Pharmaceutical Education, Scholarly Research, and Clinical Practice. A constituent college of {institutionalProfile.parentUniversity}, committed to academic integrity and healthcare innovation.
               </p>
-            </div>
-
-            <aside className="landing-side">
-              <div className="mini-panel contact-summary-panel card-institutional">
-                <span className="section-tag">Institutional Profile</span>
-                <ul className="leader-list">
-                  <li>
-                    <strong>UGC Identity</strong>
-                    <span>{institutionalProfile.status}</span>
-                  </li>
-                  <li>
-                    <strong>Parent University</strong>
-                    <span style={{ fontSize: '0.85rem' }}>{institutionalProfile.parentUniversity}</span>
-                  </li>
-                  <li>
-                    <strong>PCI Approval Status</strong>
-                    <span>{institutionalProfile.approvals}</span>
-                  </li>
-                  <li>
-                    <strong>Residential Support</strong>
-                    <span>{institutionalProfile.hostel}</span>
-                  </li>
-                </ul>
+              <div className={styles.heroActions}>
+                <Link href="/admissions" className={`button button-primary ${styles.buttonLg}`}>
+                  Explore Admissions
+                </Link>
+                <Link href="/mandatory-disclosure" className={`button button-outline ${styles.buttonLg}`}>
+                  Statutory Disclosures
+                </Link>
               </div>
-            </aside>
+            </div>
+            
+            <div className={styles.heroVisual}>
+              <div className={styles.heroImageWrapper}>
+                <Image
+                  src="/gallery/pharmacy-campus.jpeg"
+                  alt="Campus View"
+                  width={600}
+                  height={450}
+                  priority
+                  className={styles.heroImg}
+                />
+                <div className={styles.heroFloatingCard}>
+                  <span className={`${styles.textGradient} ${styles.fontBold}`}>EAPCET Code</span>
+                  <strong>JNVPSF</strong>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Affiliations & Accreditations */}
-        <section className="section section-tight bg-muted">
+        {/* Floating Affiliations Row */}
+        <section className={`section ${styles.affiliationsSection}`}>
           <div className="shell">
-            <div className="affiliation-grid">
+            <div className={styles.affiliationCardsRow}>
               {[
-                { name: "PCI", label: "Pharmacy Council of India", icon: "💊" },
-                { name: "JNTU-GV", label: "University Affiliation", icon: "🏛️" },
-                // { name: "HEI", label: "Higher Education Institute", icon: "🎓" },
+                { name: "Pharmacy Council of India", label: "Approved Institution", icon: "⚕️" },
+                { name: "JNTU-GV", label: "Constituent College", icon: "🏛️" },
+                { name: "UGC", label: "Recognized Status", icon: "🎓" },
               ].map((item, index) => (
-                <div key={index} className="affiliation-item">
-                  <span style={{ fontSize: "2rem" }}>{item.icon}</span>
+                <div key={index} className={`${styles.affiliationCardPremium} ${styles.hoverLift}`}>
+                  <div className={styles.iconWrapper}>{item.icon}</div>
                   <div>
                     <strong>{item.name}</strong>
-                    <span className="muted">{item.label}</span>
+                    <span>{item.label}</span>
                   </div>
                 </div>
               ))}
@@ -93,131 +101,96 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* Principal's Desk */}
-        <section className="section">
+        {/* Principal's Desk - Dark Premium Mode */}
+        <section className={`section ${styles.principalDarkSection}`}>
           <div className="shell">
-            <div className="content-card-block card-institutional">
-              <div className="principal-desk-layout">
-                <div className="principal-portrait">
-                  <Image
-                    src="/profiles/Dr.K.Atchuta Kumar.jpg"
-                    alt="Principal"
-                    width={280}
-                    height={340}
-                    className="principal-img"
-                  />
+            <div className={styles.principalDarkGrid}>
+              <div className={styles.principalImageContainer}>
+                <Image
+                  src="/profiles/Dr.K.Atchuta Kumar.jpg"
+                  alt="Principal"
+                  width={350}
+                  height={450}
+                  className={styles.principalPortraitPremium}
+                />
+                <div className={styles.principalNameplate}>
+                  <strong>Dr. K. Atchuta Kumar</strong>
+                  <span>Principal In-Charge</span>
                 </div>
-                <div>
-                  <span className="section-tag">From the Principal's Desk</span>
-                  <h2 className="principal-title">Visionary Leadership</h2>
-                  <p className="principal-lead">
-                    "Our mission is to foster a transformative learning environment where academic excellence meets ethical clinical practice."
-                  </p>
-                  <p className="principal-text">
-                    At the College of Pharmaceutical Sciences, we provide a multidisciplinary curriculum that integrates theoretical rigor with advanced practical inquiry. Our goal is to empower the next generation of pharmacists with the skills necessary to excel in the global healthcare ecosystem.
-                  </p>
-                  <div className="principal-actions">
-                    <Link href="/principal" className="button button-primary">Examine Vision Statement</Link>
-                    <div className="principal-signature">
-                      <strong>Dr. K. Atchuta Kumar</strong>
-                      <span className="muted">Principal In-Charge, JNTU-GV CPSV</span>
+              </div>
+              <div className={styles.principalDarkContent}>
+                <span className={styles.accentTag}>Leadership Vision</span>
+                <h2>Transforming Pharmaceutical Healthcare</h2>
+                <blockquote className={styles.premiumQuote}>
+                  "Our mission is to foster a transformative learning environment where academic excellence meets ethical clinical practice."
+                </blockquote>
+                <p>
+                  At the College of Pharmaceutical Sciences, we provide a multidisciplinary curriculum that integrates theoretical rigor with advanced practical inquiry. Our goal is to empower the next generation of pharmacists with the skills necessary to excel in the global healthcare ecosystem.
+                </p>
+                <Link href="/principal" className={`${styles.textLinkGold} ${styles.mt4}`}>
+                  Read Full Message <span className="arrow">→</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Information Portal: Notices & Events */}
+        <section className={`section ${styles.bgSoft}`}>
+          <div className={`shell ${styles.portalSplit}`}>
+            {/* Left: Notices */}
+            <div className={styles.portalColumn}>
+              <div className={styles.sectionHeadingRow}>
+                <h2>Institutional Notices</h2>
+                <Link href="/notices" className="text-link">View All</Link>
+              </div>
+              <div className={styles.noticeBoardPremium}>
+                {institutionalNotices.slice(0, 4).map((notice, index) => (
+                  <Link href="/notices" key={index} className={`${styles.noticeItemPremium} ${styles.hoverLift}`}>
+                    <div className={styles.noticeDateBadge}>
+                      <span className={styles.month}>Update</span>
+                    </div>
+                    <div className={styles.noticeContent}>
+                      <h3>{notice.title}</h3>
+                      <p className={styles.lineClamp2}>{notice.summary}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Gallery/Events */}
+            <div className={styles.portalColumn}>
+              <div className={styles.sectionHeadingRow}>
+                <h2>Campus Life & Events</h2>
+                <Link href="/gallery" className="text-link">View Gallery</Link>
+              </div>
+              <div className={styles.eventGridPremium}>
+                {institutionalGallery.slice(0, 2).map((event, i) => (
+                  <div key={i} className={`${styles.eventCardPremium} ${styles.hoverLift}`}>
+                    <div className={styles.eventImageWrap}>
+                      <Image src={event.image} alt={event.title} fill style={{ objectFit: "cover" }} />
+                    </div>
+                    <div className={styles.eventOverlay}>
+                      <span className={styles.eventCategory}>{event.category}</span>
+                      <h4>{event.title}</h4>
                     </div>
                   </div>
-                </div>
+                ))}
+              </div>
+
+              {/* Quick Stats/Links grid below events */}
+              <div className={`${styles.quickStatsGrid} ${styles.mt6}`}>
+                {admissionKeyData.map((item, i) => (
+                  <div key={i} className={styles.statCardPremium}>
+                    <span className={styles.statLabel}>{item.title}</span>
+                    <span className={styles.statValue}>{item.value}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
-
-        {/* Notice Board & Portal Side */}
-        <section className="section section-alt">
-          <div className="shell portal-layout">
-            <div className="portal-main">
-              <div className="portal-board">
-                <div className="portal-board-head">
-                  <h2>Institutional Notices & Bulletins</h2>
-                  <Link href="/notices" className="text-link">
-                    Archives Repository →
-                  </Link>
-                </div>
-                <div className="scrolling-notice-container">
-                  <div className="compact-list notice-scroll">
-                    {institutionalNotices.length > 0 ? (
-                      [...institutionalNotices, ...institutionalNotices].map((notice, index) => (
-                        <article key={`${notice.title}-${index}`}>
-                          <span className="notice-pill">{notice.date}</span>
-                          <h3>{notice.title}</h3>
-                          <p>{notice.summary}</p>
-                        </article>
-                      ))
-                    ) : (
-                      <p className="muted">Pending current announcements.</p>
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              {/* Latest Events */}
-              <div className="events-grid-block margin-top">
-                <div className="section-heading-compact">
-                  <h2>Academic & Cultural Events</h2>
-                  <Link href="/gallery" className="text-link">Examine Gallery</Link>
-                </div>
-                <div className="event-cards">
-                  {content.institutionalGallery.slice(0, 3).map((event, i) => (
-                    <article key={i} className="event-card-mini">
-                      <div className="event-img">
-                        <Image src={event.image} alt={event.title} width={300} height={200} style={{ objectFit: "cover" }} />
-                      </div>
-                      <div className="event-info">
-                        <span className="event-cat">{event.category}</span>
-                        <h4>{event.title}</h4>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* <aside className="portal-side">
-                  <h3 className="aside-title">Governance & Compliance</h3>
-                  <div className="quick-access-grid">
-                    {[
-                      { label: "Statutory Disclosures", href: "/mandatory-disclosure" },
-                      { label: "PCI Regulatory Compliance", href: "/mandatory-disclosure" },
-                      { label: "Anti-Ragging Ombudsman", href: "/student-support" },
-                      { label: "Grievance Redressal Cell", href: "/student-support" },
-                      { label: "Academic Audit Reports", href: "/academics" },
-                      { label: "Institutional Notifications", href: "/notices" }
-                    ].map((item, index) => (
-                      <Link href={item.href} className="quick-access-card" key={`${item.label}-${index}`}>
-                        <span>{item.label}</span>
-                      </Link>
-                    ))}
-                  </div>
-
-                  <div className="stats-strip">
-                    {admissionKeyData.map((item, index) => (
-                      <article className="stat-card" key={`${item.title}-${index}`}>
-                        <span>{item.title}</span>
-                        <strong>{item.value}</strong>
-                      </article>
-                    ))}
-                  </div> */}
-
-        {/* <div className="video-spotlight card-institutional">
-                <span className="section-tag">Campus Visualized</span>
-                <div className="video-thumb">
-                  <div className="video-play-hint">
-                    <span>▶ Documentary: Institutional Excellence</span>
-                  </div>
-                </div>
-              </div>
-            </aside>
-          </div>
-        </section> */}
 
         {/* Top Management Section */}
         <section className="section">
@@ -225,39 +198,57 @@ export default async function HomePage() {
             <div className="section-heading text-center">
               <span className="section-tag">University Governance</span>
               <h2>Leadership & Statutory Administration</h2>
+              <div className={styles.headingUnderline}></div>
             </div>
+            
             <div className="leadership-grid">
               {universityLeadership.map((leader, i) => (
                 <article key={i} className="leader-card-box">
-                  <div className="leader-title-wrap">
-                    <img src={leader.image} alt={leader.name} />
-                    <span className="role-tag">{leader.role}</span>
-                    <h3>{leader.name}</h3>
-                    <p className="muted">{leader.detail}</p>
+                  <div className="leader-photo-wrap">
+                    <Image
+                      src={leader.image}
+                      alt={leader.name}
+                      width={120}
+                      height={120}
+                      unoptimized={leader.image.startsWith("http")}
+                    />
                   </div>
+                  <span className="role-tag">{leader.role}</span>
+                  <h3>{leader.name}</h3>
+                  <p className="muted">{leader.detail}</p>
                 </article>
               ))}
             </div>
-            <div className="text-center margin-top">
+            <div className={`text-center ${styles.marginTopLg}`}>
               <Link href="/administration" className="button button-outline">Examine Full Academic Senate</Link>
             </div>
           </div>
         </section>
 
-        <section className="section section-alt">
+        {/* Explore Portfolio */}
+        <section className={`section ${styles.programsSection}`}>
           <div className="shell">
-            <div className="section-heading">
-              <div>
-                <span className="section-tag">Explore Portfolio</span>
-                <h2>Academic & Research Ecosystem</h2>
-              </div>
-              <p>
-                The institution is anchored by three fundamental pillars: Pedagogical Excellence, Innovative Research, and Scholarly Discipline.
-              </p>
+            <div className="section-heading text-center">
+              <span className="section-tag">Academic Excellence</span>
+              <h2>Our Academic Programs</h2>
+              <div className={styles.headingUnderline}></div>
+            </div>
+            
+            <div className={`${styles.programsGrid} ${styles.marginTopLg}`}>
+              {academicPrograms.map((prog, i) => (
+                <div key={i} className={`${styles.programCard} ${styles.hoverLift}`}>
+                  <div className={styles.programIcon}>🎓</div>
+                  <h3>{prog.name}</h3>
+                  <p className={styles.duration}>{prog.duration}</p>
+                  <p className="muted">{prog.note}</p>
+                  <div className={styles.programStatus}>{prog.status}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
       </main>
-    </SiteShell >
+    </SiteShell>
   );
 }
+

@@ -14,14 +14,14 @@ export default async function FacultyDetailPage({ params }) {
   noStore();
   const { slug } = await params;
   const content = await getSiteContent();
-  const allFaculty = enrichFaculty(content.faculty);
+  const allFaculty = enrichFaculty(content.facultyRepository || []);
   const profile = allFaculty.find((member) => member.slug === slug);
 
   if (!profile) {
     notFound();
   }
 
-  const { downloads } = content;
+  const { scholarlyDownloads } = content;
 
   return (
     <SiteShell content={content}>
@@ -64,7 +64,7 @@ export default async function FacultyDetailPage({ params }) {
             <div className="sidebar-card">
               <h3>Academic Downloads</h3>
               <ul className="link-list">
-                {downloads.slice(0, 3).map((item) => (
+                {(scholarlyDownloads || []).slice(0, 3).map((item) => (
                   <li key={item.title}>
                     <a href={item.file} target="_blank" rel="noreferrer">
                       {item.title}
@@ -78,53 +78,55 @@ export default async function FacultyDetailPage({ params }) {
       >
         <section className="portal-main">
           <div className="portal-board">
-            <div className="profile-detail-grid" style={{ display: "grid", gridTemplateColumns: "minmax(auto, 320px) 1fr", gap: "3rem" }}>
-              <div className="profile-portrait-wrap">
-                <Image 
-                   src={profile.image || "/placeholder-faculty.jpg"} 
-                   alt={profile.name} 
-                   width={420} 
-                   height={520} 
-                   style={{ borderRadius: "16px", objectFit: "cover", boxShadow: "var(--shadow)" }}
-                />
-              </div>
-              <div className="profile-info-content">
+          <div className="profile-detail-grid">
+            <div className="profile-portrait-wrap">
+              <Image 
+                 src={profile.image || "/placeholder-faculty.jpg"} 
+                 alt={profile.name} 
+                 width={420} 
+                 height={520}
+                 priority
+              />
+            </div>
+            <div className="profile-info-content">
+              <div className="profile-info-header">
                 <span className="notice-pill">{profile.designation}</span>
-                <h2 style={{ fontSize: "2.5rem", margin: "0.5rem 0", color: "var(--primary-deep)" }}>{profile.name}</h2>
-                <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--primary)" }}>{profile.department}</p>
-                
-                <div className="stats-strip" style={{ margin: "2rem 0" }}>
-                   <article className="stat-card">
-                      <span>Total Experience</span>
-                      <strong>{profile.experience}</strong>
-                   </article>
-                </div>
+                <h2>{profile.name}</h2>
+                <p className="dept-title">{profile.department}</p>
+              </div>
+              
+              <div className="stats-strip" style={{ margin: 0 }}>
+                 <article className="stat-card">
+                    <span>Total Experience</span>
+                    <strong>{profile.experience.split(' ')[0]} Years+</strong>
+                 </article>
+              </div>
 
-                <div className="content-card-block" style={{ padding: 0, border: "none", boxShadow: "none" }}>
-                   <h3>Professional Statement</h3>
-                   <p style={{ lineHeight: "1.8", color: "var(--muted)" }}>{profile.profile}</p>
-                </div>
+              <div className="content-card-block" style={{ padding: 0, border: "none", boxShadow: "none", background: "none" }}>
+                 <h3>Professional Statement</h3>
+                 <p className="lead" style={{ fontSize: "1rem", lineHeight: "1.8" }}>{profile.profile}</p>
+              </div>
 
-                <div className="info-grid two-col" style={{ marginTop: "2rem" }}>
-                   <div className="mini-panel">
-                      <h4>Research Areas</h4>
-                      <ul className="clean-list" style={{ fontSize: "0.9rem" }}>
-                         <li>Pharmaceutical Formulations</li>
-                         <li>Drug Delivery Systems</li>
-                         <li>Clinical Research & Safety</li>
-                      </ul>
-                   </div>
-                   <div className="mini-panel">
-                      <h4>Qualifications</h4>
-                      <ul className="clean-list" style={{ fontSize: "0.9rem" }}>
-                         <li>Ph.D. in Pharmaceutical Sciences</li>
-                         <li>M.Pharmacy (Rank Holder)</li>
-                         <li>Registered Pharmacist</li>
-                      </ul>
-                   </div>
-                </div>
+              <div className="info-grid two-col">
+                 <div className="mini-panel">
+                    <h4>Research Areas</h4>
+                    <ul className="clean-list">
+                       <li>Pharmaceutical Formulations</li>
+                       <li>Drug Delivery Systems</li>
+                       <li>Clinical Research & Safety</li>
+                    </ul>
+                 </div>
+                 <div className="mini-panel">
+                    <h4>Qualifications</h4>
+                    <ul className="clean-list">
+                       <li>Ph.D. in Pharmaceutical Sciences</li>
+                       <li>M.Pharmacy (Rank Holder)</li>
+                       <li>Registered Pharmacist</li>
+                    </ul>
+                 </div>
               </div>
             </div>
+          </div>
           </div>
 
           <article className="content-card-block card-institutional" style={{ marginTop: "3rem" }}>

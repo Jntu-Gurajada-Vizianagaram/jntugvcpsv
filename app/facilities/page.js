@@ -2,6 +2,7 @@ import { unstable_noStore as noStore } from "next/cache";
 import { PageHero } from "@/components/page-hero";
 import { SiteShell } from "@/components/site-shell";
 import { getSiteContent } from "@/lib/cms";
+import styles from "./facilities.module.css";
 
 export const dynamic = "force-dynamic";
 
@@ -20,40 +21,40 @@ export default async function FacilitiesPage() {
       
       <main className="section">
         <div className="shell">
-          <div className="portal-layout-grid">
-            <aside className="sidebar-box">
-              <div className="sidebar-card card-institutional">
-                <span className="section-tag">Facility Quick-Link</span>
-                <ul className="footer-link-list">
+          <div className={styles.layoutGrid}>
+            <aside>
+              <div className={styles.sidebarCard}>
+                <span className={styles.sectionTag}>Facility Quick-Link</span>
+                <ul className={styles.linkList}>
                   {facilities.map((item) => (
-                    <li key={item.title} className="text-link" style={{ fontSize: '0.9rem' }}>• {item.title}</li>
+                    <li key={item.title} className={styles.linkItem}>{item.title}</li>
                   ))}
                 </ul>
               </div>
 
-              <div className="sidebar-card card-institutional">
-                <span className="section-tag">Residential Status</span>
-                <p className="muted" style={{ fontSize: '0.85rem' }}>
+              <div className={styles.sidebarCard}>
+                <span className={styles.sectionTag}>Residential Status</span>
+                <p className={styles.mutedText}>
                   The institution provides secure, gender-segregated residential halls within the campus premises, compliant with university housing norms.
                 </p>
               </div>
             </aside>
 
-            <div className="portal-main">
-              <div className="grid-res-2">
+            <div className={styles.mainContent}>
+              <div className={styles.facilityGrid}>
                 {facilities.map((facility) => (
-                  <article className="card card-institutional" key={facility.title}>
-                    <span className="notice-pill">Infrastructure</span>
-                    <h3 className="faculty-name" style={{ marginTop: '0.75rem' }}>{facility.title}</h3>
-                    <p className="muted" style={{ fontSize: '0.95rem', marginTop: '0.5rem' }}>{facility.description}</p>
+                  <article className={styles.facilityCard} key={facility.title}>
+                    <span className={styles.noticePill}>Infrastructure</span>
+                    <h3 className={styles.facilityTitle}>{facility.title}</h3>
+                    <p className={styles.facilityDesc}>{facility.description}</p>
                   </article>
                 ))}
               </div>
 
-              <article className="content-card-block card-institutional text-center margin-top-xl">
-                <span className="section-tag">Campus Life</span>
-                <h2>Holistic Student Ecosystem</h2>
-                <p className="lead" style={{ margin: '1.5rem auto' }}>
+              <article className={styles.campusBanner}>
+                <span className={styles.bannerTag}>Campus Life</span>
+                <h2 className={styles.bannerTitle}>Holistic Student Ecosystem</h2>
+                <p className={styles.bannerLead}>
                   Beyond academic infrastructure, JNTU-GV CPSV offers a comprehensive ecosystem including diagnostic labs, digital libraries, and wellness centers to ensure the holistic development of pharmaceutical scholars.
                 </p>
               </article>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { getSectionNav, navGroups, publicNav, utilityLinks } from "@/lib/navigation";
+import styles from "./header.module.css";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -22,31 +23,37 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
+    <header className={`${styles.siteHeader} ${scrolled ? styles.scrolled : ""}`}>
       {/* Top Utility Strip */}
-      <div className="top-strip">
-        <div className="shell top-strip-inner">
-          <div className="utility-link-row">
+      <div className={styles.topStrip}>
+        <div className={`shell ${styles.topStripInner}`}>
+          <div className={styles.utilityLinkRow}>
             {utilityLinks.map((item) => (
               <Link key={item.label} href={item.href}>
                 {item.label}
               </Link>
             ))}
           </div>
-          <div className="top-strip-note">
-            <span>PCI Approved</span>
-            <span className="separator">|</span>
+          <div className={styles.topStripNote}>
+            <Link href="/downloads/JNTU-GV%20PCI%20APPROVAL%202025-26.pdf" target="_blank" className={styles.topBadgeLink}>
+              📜 PCI Approval Letter
+            </Link>
+            <span className={styles.separator}>|</span>
+            <Link href="/mandatory-disclosure" className={styles.topBadgeLink}>
+              🏛️ Affiliation Letter
+            </Link>
+            <span className={styles.separator}>|</span>
             <span>EAPCET Code: JNVPSF</span>
           </div>
         </div>
       </div>
 
       {/* Premium Institutional Masthead */}
-      <div className="masthead">
-        <div className="shell masthead-inner">
-          <div className="v_logo">
+      <div className={styles.masthead}>
+        <div className="shell">
+          <div className={styles.vLogo}>
             {/* Left Logo */}
-            <Link href="/" className="logo_img">
+            <Link href="/" className={styles.logoImg}>
               <Image
                 src="/logo512.png"
                 alt="JNTU-GV Pharmacy Logo"
@@ -57,11 +64,11 @@ export function SiteHeader() {
             </Link>
 
             {/* Center Content */}
-            <div className="logo_content">
-              <h2 className="college_title">JNTU-GV COLLEGE OF PHARMACEUTICAL SCIENCES, VIZIANAGARAM</h2>
-              <h3 className="university_subtitle">JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY - GURAJADA VIZIANAGARAM</h3>
-              <p className="address_line">DWARAPUDI, VIZIANAGARAM, ANDHRA PRADESH - 535 003.</p>
-              <p className="constituent_line">
+            <div className={styles.logoContent}>
+              <h2 className={styles.collegeTitle}>JNTU-GV COLLEGE OF PHARMACEUTICAL SCIENCES, VIZIANAGARAM</h2>
+              <h3 className={styles.universitySubtitle}>JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY - GURAJADA VIZIANAGARAM</h3>
+              <p className={styles.addressLine}>DWARAPUDI, VIZIANAGARAM, ANDHRA PRADESH - 535 003.</p>
+              <p className={styles.constituentLine}>
                 ( A Constituent College of JNTU-GV & Approved by PCI, New Delhi )
               </p>
             </div>
@@ -70,56 +77,55 @@ export function SiteHeader() {
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="nav-bar-wrap">
-        <div className="shell nav-inner">
+      <div className={styles.navBarWrap}>
+        <div className={`shell ${styles.navInner}`}>
           <button
-            className="menu-button"
+            className={styles.menuButton}
             type="button"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
-            <span className="menu-icon"></span>
-            {open ? "Close" : "Menu"}
+            {open ? "Close Menu" : "☰ Menu"}
           </button>
 
-          <nav className={`main-nav ${open ? "open" : ""}`}>
-            <div className="desktop-links">
+          <nav className={`${styles.mainNav} ${open ? styles.open : ""}`}>
+            <div className={styles.desktopLinks}>
               {publicNav.slice(0, 7).map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={pathname === item.href ? "active" : ""}
+                  className={`${styles.navLink} ${pathname === item.href ? styles.active : ""}`}
                 >
                   {item.label}
                 </Link>
               ))}
 
-              <div className="nav-dropdown">
-                <button className="dropdown-trigger">More +</button>
-                <div className="dropdown-content">
+              <div className={styles.navDropdown}>
+                <button className={styles.dropdownTrigger}>More +</button>
+                <div className={styles.dropdownContent}>
                   {publicNav.slice(7).map((item) => (
-                    <Link key={item.label} href={item.href}>{item.label}</Link>
+                    <Link key={item.label} href={item.href} className={styles.dropdownLink}>{item.label}</Link>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="nav-actions">
-              <Link href="/admissions" className="nav-cta">Admissions 2025</Link>
-              <Link href="/login" className="nav-auth">CMS Portal</Link>
+            <div className={styles.navActions}>
+              <Link href="/admissions" className={styles.navCta}>Admissions 2025</Link>
+              <Link href="/login" className={styles.navAuth}>CMS Portal</Link>
             </div>
 
-            <div className="mobile-nav-content">
+            <div className={styles.mobileNavContent}>
               {navGroups.map((group) => (
-                <div className="mobile-group" key={group.label}>
+                <div className={styles.mobileGroup} key={group.label}>
                   <button
-                    className={`mobile-trigger ${openGroup === group.label ? "active" : ""}`}
+                    className={`${styles.mobileTrigger} ${openGroup === group.label ? styles.active : ""}`}
                     onClick={() => setOpenGroup(current => current === group.label ? "" : group.label)}
                   >
                     {group.label}
                     <span>{openGroup === group.label ? "−" : "+"}</span>
                   </button>
-                  <div className={`mobile-panel ${openGroup === group.label ? "open" : ""}`}>
+                  <div className={`${styles.mobilePanel} ${openGroup === group.label ? styles.open : ""}`}>
                     {group.items.map(item => (
                       <Link key={item.label} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>
                     ))}
@@ -130,22 +136,6 @@ export function SiteHeader() {
           </nav>
         </div>
       </div>
-
-      {/* Section Context Secondary Navigation */}
-      {sectionNav && pathname !== "/" && !pathname.startsWith("/admin") && !pathname.startsWith("/login") ? (
-        <div className="section-subnav">
-          <div className="shell subnav-inner">
-            <span className="subnav-label">{sectionNav.label} Directory</span>
-            <div className="subnav-links">
-              {sectionNav.items.map((item) => (
-                <Link key={item.label} href={item.href} className={pathname === item.href ? "active" : ""}>
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      ) : null}
 
     </header>
   );

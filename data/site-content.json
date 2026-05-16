@@ -21,12 +21,6 @@
       "duration": "4 Years (8 Semesters)",
       "status": "Admissions Ongoing",
       "note": "Admission to the undergraduate program is strictly regulated through EAPCET rankings in accordance with the Council and University statutes."
-    },
-    {
-      "name": "Postgraduate Studies (M.Pharm)",
-      "duration": "2 Years",
-      "status": "Commencing Shortly",
-      "note": "Advanced specializations in Pharmaceutics and Pharmaceutical Analysis are proposed for upcoming academic sessions."
     }
   ],
   "governanceFramework": [
@@ -60,7 +54,7 @@
     {
       "title": "2. Regulatory Approvals & Certifications",
       "items": [
-        "Pharmacy Council of India (PCI) Approval Letter",
+        "Pharmacy Council of India (PCI) Approval Letter [2025-26] (/downloads/JNTU-GV PCI APPROVAL 2025-26.pdf)",
         "University Affiliation & Constituent Orders",
         "EAPCET Counselling Code: JNVPSF",
         "Statutory compliance for sanctioned student intake"
@@ -186,16 +180,19 @@
   "universityLeadership": [
     {
       "role": "Hon'ble Chancellor",
+      "image": "https://jntugv.edu.in/static/media/chancellor.2ed91f57067384cddd59.jpeg",
       "name": "Shri Justice(Retd.) S. Abdul Nazeer",
       "detail": "Governor of Andhra Pradesh"
     },
     {
       "role": "Hon'ble Vice Chancellor",
+      "image": "https://jntugv.edu.in/static/media/vc.1d93f5ebef1ab0a5e73b.png",
       "name": "Prof. V V Subba Rao",
       "detail": "Vice Chancellor, JNTU-GV"
     },
     {
       "role": "Registrar",
+      "image": "https://jntugv.edu.in/static/media/registrar_new.4be86c91745d5166c94c.jpeg",
       "name": "Prof. D. Rajya Lakshmi",
       "detail": "Registrar, JNTU-GV"
     }
@@ -203,7 +200,7 @@
   "contactInventory": [
     {
       "label": "Mailing Address",
-      "value": "Dwarapudi, Vizianagaram, Andhra Pradesh - 535003, India"
+      "value": "JNTU-GV College of Pharmaceutical Sciences, Dwarapudi, Vizianagaram, Andhra Pradesh - 535003, India"
     },
     {
       "label": "Administrative Desk",
@@ -250,58 +247,6 @@
     {
       "label": "Library & Resources",
       "href": "/academics"
-    }
-  ],
-  "academicDepartments": [
-    {
-      "title": "Dept. of Pharmaceutics",
-      "description": "Specialized in advanced drug delivery systems, industrial pharmacy protocols, and dosage form optimization."
-    },
-    {
-      "title": "Dept. of Pharmaceutical Analysis",
-      "description": "Focused on modern analytical techniques, chromatographic validation, and regulatory quality control standards."
-    },
-    {
-      "title": "Dept. of Pharmacology",
-      "description": "Dedicated to investigating drug-target interactions, preclinical evaluations, and therapeutic toxicology."
-    },
-    {
-      "title": "Dept. of Pharmaceutical Chemistry",
-      "description": "Centered on medicinal chemistry, synthetic organic pathways, and molecular docking studies for drug discovery."
-    },
-    {
-      "title": "Dept. of Pharmacognosy",
-      "description": "Exploring bioactive natural products, herbal standardization, and traditional medicine modernization."
-    },
-    {
-      "title": "Dept. of Pharmacy Practice",
-      "description": "Emphasizing clinical pharmacy excellence, patient safety protocols, and hospital-based healthcare delivery."
-    }
-  ],
-  "campusInfrastructure": [
-    {
-      "title": "Central Knowledge Resource",
-      "description": "A comprehensive repository of pharmaceutical literature, e-journals, and digital academic archives."
-    },
-    {
-      "title": "Diagnostic & Formulation Labs",
-      "description": "Advanced subject-specific laboratories equipped for experimental research and practical proficiency."
-    },
-    {
-      "title": "Residential Infrastructure",
-      "description": "Secure and well-governed residential halls ensuring conducive learning environments for students."
-    },
-    {
-      "title": "Information & ICT Services",
-      "description": "Integrated campus networking, high-speed connectivity, and digital learning management systems."
-    },
-    {
-      "title": "Academic Seminar Halls",
-      "description": "Specialized venues for international symposia, workshops, and high-level academic deliberations."
-    },
-    {
-      "title": "Student Support Ecosystem",
-      "description": "Holistic campus services including administrative aid, wellbeing support, and extracurricular coordination."
     }
   ],
   "institutionalDirectory": [
@@ -369,7 +314,7 @@
       "department": "Department of Pharmaceutical Sciences",
       "experience": "8 years in Academic Mentorship & Instruction",
       "email": "vasavigokavarapu999@gmail.com",
-      "image": "/profiles/Mrs.G.Vasavi.jpg",
+      "image": "/profiles/Mrs.G.Vasavi.png",
       "profile": "Mrs. G. Vasavi is dedicated to student mentorship and instructional excellence, focusing on the core foundations of pharmaceutical sciences."
     }
   ],
@@ -382,6 +327,11 @@
       "title": "Academic Syllabus: B.Pharm",
       "file": "/downloads/Syllabus_B_Pharm.pdf",
       "description": "Standardized academic curriculum for the Bachelor of Pharmacy program (PCI compliant)."
+    },
+    {
+      "title": "JNTU-GV PCI APPROVAL 2025-26",
+      "file": "/downloads/JNTU-GV PCI APPROVAL 2025-26.pdf",
+      "description": "Official Pharmacy Council of India (PCI) Approval document for the academic year 2025-26."
     }
   ],
   "institutionalGallery": [
@@ -416,16 +366,6 @@
       "category": "Campus Culture"
     },
     {
-      "title": "Academic Symposium - Eclectique",
-      "image": "/gallery/eclectique-1.jpg",
-      "category": "Scholarly Events"
-    },
-    {
-      "category": "Scholarly Events",
-      "image": "/gallery/eclectique-2.jpg",
-      "title": "Student Technical Festivities"
-    },
-    {
       "title": "Library Archive Facility",
       "image": "/gallery/library-1.jpg",
       "category": "Infrastructure"
@@ -447,7 +387,7 @@
     }
   ],
   "metaData": {
-    "lastInstitutionalUpdate": "2026-04-22T15:00:00Z",
-    "verifiedBy": "Institutional CMS Team"
+    "lastInstitutionalUpdate": "",
+    "verifiedBy": ""
   }
 }

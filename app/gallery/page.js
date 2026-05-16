@@ -2,6 +2,7 @@ import { unstable_noStore as noStore } from "next/cache";
 import { PageHero } from "@/components/page-hero";
 import { SiteShell } from "@/components/site-shell";
 import { getSiteContent } from "@/lib/cms";
+import styles from "./gallery.module.css";
 
 export const dynamic = "force-dynamic";
 
@@ -20,28 +21,28 @@ export default async function GalleryPage() {
       
       <main className="section">
         <div className="shell">
-          <div className="portal-layout-grid">
-            <aside className="sidebar-box">
-              <div className="sidebar-card card-institutional">
-                <span className="section-tag">Categories</span>
-                <ul className="footer-link-list">
+          <div className={styles.layoutGrid}>
+            <aside>
+              <div className={styles.sidebarCard}>
+                <span className={styles.sectionTag}>Categories</span>
+                <ul className={styles.linkList}>
                   {[...new Set(gallery.map((item) => item.category))].map((category) => (
-                    <li key={category} className="text-link" style={{ fontSize: '0.9rem' }}>• {category}</li>
+                    <li key={category} className={styles.linkItem}>{category}</li>
                   ))}
                 </ul>
               </div>
             </aside>
 
-            <div className="portal-main">
-              <div className="grid-res-2">
+            <div className={styles.mainContent}>
+              <div className={styles.galleryGrid}>
                 {gallery.map((item, index) => (
-                  <article className="gallery-card card-institutional" key={`${item.title}-${index}`}>
-                    <div className="gallery-image-wrap">
-                      <img src={item.image} alt={item.title} className="principal-img" style={{ width: '100%', height: 'auto', borderRadius: '12px' }} />
+                  <article className={styles.galleryCard} key={`${item.title}-${index}`}>
+                    <div className={styles.imageWrap}>
+                      <img src={item.image} alt={item.title} className={styles.galleryImg} />
                     </div>
-                    <div className="gallery-body" style={{ padding: '1rem 0' }}>
-                      <span className="notice-pill">{item.category}</span>
-                      <h3 className="faculty-name" style={{ marginTop: '0.75rem' }}>{item.title}</h3>
+                    <div className={styles.galleryBody}>
+                      <span className={styles.noticePill}>{item.category}</span>
+                      <h3 className={styles.galleryTitle}>{item.title}</h3>
                     </div>
                   </article>
                 ))}

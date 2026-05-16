@@ -1,0 +1,291 @@
+/* Faculty Page Premium Styles */
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .layoutGrid {
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+  }
+}
+
+/* Sidebar Components */
+.sidebarCard {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  margin-bottom: 2rem;
+}
+
+.sectionTag {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.principalProfile {
+  text-align: center;
+}
+
+.principalPhoto {
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 4/5;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+.principalImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.principalImg:hover {
+  transform: scale(1.05);
+}
+
+.principalName {
+  font-size: 1.4rem;
+  color: var(--primary-deep);
+  margin-bottom: 0.5rem;
+}
+
+.principalDesc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.primaryBtn {
+  display: block;
+  width: 100%;
+  background: var(--primary-deep);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.primaryBtn:hover {
+  background: var(--gold);
+  color: var(--primary-deep);
+}
+
+.secondaryBtn {
+  display: inline-block;
+  background: var(--bg-soft);
+  color: var(--primary-deep);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.secondaryBtn:hover {
+  background: white;
+  border-color: var(--primary-deep);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linkItem {
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.linkItem:hover {
+  color: var(--gold);
+}
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.boardSection {
+  background: transparent;
+}
+
+.boardHead {
+  border-bottom: 2px solid var(--bg-soft);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.boardTitle {
+  font-size: 2rem;
+  color: var(--primary-deep);
+  font-family: var(--font-serif);
+}
+
+.facultyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .facultyGrid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+/* Faculty Card Styles */
+.facultyCard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facultyCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+}
+
+.memberPhotoWrap {
+  background-color: var(--bg-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.memberPhotoWrap::before {
+  content: "";
+  display: block;
+  padding-bottom: 100%; /* 1:1 aspect ratio */
+}
+
+@media (min-width: 600px) {
+  .memberPhotoWrap::before {
+    padding-bottom: 125%; /* 4:5 aspect ratio */
+  }
+}
+
+.memberImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.facultyCard:hover .memberImg {
+  transform: scale(1.05);
+}
+
+.memberBody {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.noticePill {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.memberName {
+  font-size: 1.5rem;
+  color: var(--primary-deep);
+  margin-bottom: 0.5rem;
+}
+
+.memberDept {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.memberMeta {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem;
+}
+
+.memberMeta strong {
+  color: var(--primary-deep);
+}
+
+.memberMeta span {
+  color: var(--muted);
+}
+
+.memberActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Banner */
+.commitmentBanner {
+  background: white;
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.bannerTitle {
+  font-size: 2.2rem;
+  color: var(--primary-deep);
+  font-family: var(--font-serif);
+  margin-bottom: 1.5rem;
+}
+
+.bannerLead {
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}

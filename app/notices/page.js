@@ -2,6 +2,7 @@ import { unstable_noStore as noStore } from "next/cache";
 import { PageHero } from "@/components/page-hero";
 import { SiteShell } from "@/components/site-shell";
 import { getSiteContent } from "@/lib/cms";
+import styles from "./notices.module.css";
 
 export const dynamic = "force-dynamic";
 
@@ -20,25 +21,25 @@ export default async function NoticesPage() {
       
       <main className="section">
         <div className="shell">
-          <div className="portal-layout-grid">
-            <aside className="sidebar-box">
-              <div className="sidebar-card card-institutional">
-                <span className="section-tag">Notice Repository</span>
-                <p className="muted" style={{ fontSize: '0.85rem' }}>
+          <div className={styles.layoutGrid}>
+            <aside>
+              <div className={styles.sidebarCard}>
+                <span className={styles.sectionTag}>Notice Repository</span>
+                <p className={styles.mutedText}>
                   This archive maintains official documentation and bulletins published by the institution.
                 </p>
               </div>
             </aside>
 
-            <div className="portal-main">
-              <div className="stacked-sections">
+            <div className={styles.mainContent}>
+              <div className={styles.stackedList}>
                 {notices.map((notice, index) => (
-                  <article className="content-card-block card-institutional" key={`${notice.title}-${index}`}>
-                    <span className="notice-pill">{notice.date}</span>
-                    <h2 className="margin-top-sm">{notice.title}</h2>
-                    <p className="margin-top">{notice.summary}</p>
+                  <article className={styles.noticeCard} key={`${notice.title}-${index}`}>
+                    <span className={styles.noticePill}>{notice.date}</span>
+                    <h2 className={styles.noticeTitle}>{notice.title}</h2>
+                    <p className={styles.noticeSummary}>{notice.summary}</p>
                     {notice.file && (
-                      <a href={notice.file} target="_blank" rel="noreferrer" className="button button-secondary margin-top" style={{ width: 'fit-content' }}>
+                      <a href={notice.file} target="_blank" rel="noreferrer" className={styles.docBtn}>
                         View Document (PDF)
                       </a>
                     )}

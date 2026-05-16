@@ -1,0 +1,176 @@
+/* Admissions Page Premium Styles */
+
+.stackedSections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebarCard {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.sectionTag {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.codeTitle {
+  font-size: 2.4rem;
+  margin: 0.5rem 0;
+  color: var(--primary-deep);
+  font-family: var(--font-serif);
+}
+
+.mutedText {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.supportList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.supportLabel {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.supportValue {
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+/* Main Area */
+.boardHead {
+  border-bottom: 2px solid var(--bg-soft);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.boardTitle {
+  font-size: 1.8rem;
+  color: var(--primary-deep);
+}
+
+.statsStrip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.statLabel {
+  color: var(--gold);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--primary-deep);
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+.contentCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  margin-top: 3rem;
+}
+
+.cardTitle {
+  font-size: 1.6rem;
+  color: var(--primary-deep);
+  margin: 1rem 0;
+}
+
+.leadText {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+.cleanList {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+  border-left: 4px solid var(--gold);
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.cleanList li {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.cleanList strong {
+  color: var(--primary-deep);
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .featureGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.miniPanel {
+  padding: 1.5rem;
+  background: var(--bg-soft);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-weight: 500;
+}

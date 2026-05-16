@@ -1,0 +1,460 @@
+/* Premium Nav Bar Styles */
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.05);
+}
+
+.siteHeader.scrolled {
+  box-shadow: 0 10px 30px -10px rgba(23, 37, 84, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.siteHeader.scrolled .masthead {
+  display: none; /* Hide masthead on scroll for sleek sticky nav */
+}
+
+/* Top Utility Strip */
+.topStrip {
+  background: var(--primary-deep);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 0;
+}
+
+@media (max-width: 768px) {
+  .topStrip { display: none; }
+}
+
+.topStripInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utilityLinkRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.utilityLinkRow a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s ease;
+}
+
+.utilityLinkRow a:hover {
+  color: var(--gold);
+}
+
+.topStripNote {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topBadgeLink {
+  color: var(--gold);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.topBadgeLink:hover {
+  background: var(--gold);
+  color: var(--primary-deep);
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Masthead */
+.masthead {
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.vLogo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logoImg {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.logoImg:hover {
+  transform: scale(1.05);
+}
+
+.logoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.collegeTitle {
+  margin: 0;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--primary-deep);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.universitySubtitle {
+  margin: 0;
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.addressLine {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.constituentLine {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .vLogo {
+    flex-direction: column;
+    text-align: center;
+  }
+  .constituentLine { align-self: center; }
+}
+
+/* Nav Bar Wrap */
+.navBarWrap {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Desktop Links */
+.desktopLinks {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopLinks {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.navLink {
+  padding: 1.2rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+  border-radius: 3px 3px 0 0;
+}
+
+.navLink:hover, .navLink.active {
+  color: var(--primary-deep);
+}
+
+.navLink:hover::after, .navLink.active::after {
+  width: 100%;
+}
+
+/* Dropdown */
+.navDropdown {
+  position: relative;
+  height: 100%;
+}
+
+.dropdownTrigger {
+  padding: 1.2rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dropdownTrigger:hover {
+  color: var(--primary-deep);
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 240px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 3px solid var(--gold);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.navDropdown:hover .dropdownContent {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownLink {
+  padding: 0.8rem 1.5rem;
+  color: var(--text);
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdownLink:hover {
+  background: var(--bg-soft);
+  color: var(--primary-deep);
+  padding-left: 2rem; /* micro interaction */
+}
+
+/* Nav Actions */
+.navActions {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.navCta {
+  background: var(--primary-deep);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(23, 37, 84, 0.2);
+}
+
+.navCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(23, 37, 84, 0.3);
+}
+
+.navAuth {
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.navAuth:hover {
+  background: var(--gold);
+  color: var(--primary-deep);
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: block;
+  background: none;
+  border: none;
+  padding: 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .menuButton { display: none; }
+}
+
+/* Mobile Nav Content */
+.mainNav {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.mobileNavContent {
+  display: none;
+  background: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.mainNav.open .mobileNavContent {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .mobileNavContent { display: none !important; }
+}
+
+.mobileGroup {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.mobileTrigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  cursor: pointer;
+}
+
+.mobilePanel {
+  display: none;
+  flex-direction: column;
+  padding: 0 0 1rem 1rem;
+  gap: 0.8rem;
+}
+
+.mobilePanel.open {
+  display: flex;
+}
+
+.mobilePanel a {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Secondary Section Subnav */
+.sectionSubnav {
+  background: var(--bg-soft);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.8rem 0;
+}
+
+.subnavInner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.subnavInner::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.subnavLabel {
+  font-weight: 800;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subnavLabel::after {
+  content: "→";
+  color: var(--muted);
+}
+
+.subnavLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.subnavLink {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.subnavLink:hover, .subnavLink.active {
+  color: var(--primary-deep);
+}

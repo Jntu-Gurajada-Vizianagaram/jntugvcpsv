@@ -50,20 +50,22 @@ export default async function PrincipalPage() {
 
             <div className="portal-main">
               <article className="content-card-block card-institutional">
-                <div className="principal-layout" style={{ display: 'grid', gridTemplateColumns: 'minmax(200px, 300px) 1fr', gap: '2.5rem' }}>
-                  <div className="principal-photo-wrap">
-                    <img src={principal.image} alt={principal.name} style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: 'var(--shadow)' }} />
+                <div className="profile-detail-grid">
+                  <div className="profile-portrait-wrap">
+                    <img src={principal.image} alt={principal.name} />
                   </div>
-                  <div className="principal-details">
-                    <span className="notice-pill">{principal.designation}</span>
-                    <h2 style={{ marginTop: '0.75rem', fontSize: '2rem' }}>{principal.name}</h2>
-                    <p className="lead" style={{ color: 'var(--primary)', fontWeight: 700, marginTop: '0.5rem' }}>{principal.department}</p>
+                  <div className="profile-info-content">
+                    <div className="profile-info-header">
+                      <span className="notice-pill">{principal.designation}</span>
+                      <h2>{principal.name}</h2>
+                      <p className="dept-title">{principal.department}</p>
+                    </div>
                     
-                    <div className="principal-message-body margin-top-xl">
-                      <h3 className="section-tag" style={{ background: 'none', borderBottom: '2px solid var(--gold)', borderRadius: 0, padding: '0 0 0.5rem 0' }}>
+                    <div className="principal-message-body" style={{ marginTop: '1.5rem' }}>
+                      <h3 className="section-tag" style={{ background: 'none', borderBottom: '2px solid var(--gold)', borderRadius: 0, padding: '0 0 0.5rem 0', color: 'var(--primary-deep)' }}>
                         {principalMessage.title}
                       </h3>
-                      <p className="margin-top" style={{ fontSize: '1.1rem', fontStyle: 'italic', color: 'var(--navy)', lineHeight: 1.8 }}>
+                      <p style={{ fontSize: '1.1rem', fontStyle: 'italic', color: 'var(--navy)', lineHeight: 1.8, marginTop: '1rem' }}>
                         "{principalMessage.message}"
                       </p>
                     </div>

@@ -1,14 +1,26 @@
 import { unstable_noStore as noStore } from "next/cache";
+import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { SiteShell } from "@/components/site-shell";
 import { getSiteContent } from "@/lib/cms";
+import styles from "./about.module.css";
 
 export const dynamic = "force-dynamic";
+
+const sidebarLinks = [
+  { label: "Regulatory Disclosures", href: "/mandatory-disclosure" },
+  { label: "Admissions Desk", href: "/admissions" },
+  { label: "Faculty Roster", href: "/faculty" },
+  { label: "Student Welfare", href: "/student-support" },
+  { label: "Academic Facilities", href: "/facilities" },
+  { label: "Connect with Us", href: "/contact" },
+  { label: "Library & Resources", href: "/facilities" }
+];
 
 export default async function AboutPage() {
   noStore();
   const content = await getSiteContent();
-  const { institutionalProfile, academicLinks, institutionalDirectory } = content;
+  const { institutionalProfile, institutionalDirectory } = content;
 
   return (
     <SiteShell content={content}>
@@ -20,58 +32,64 @@ export default async function AboutPage() {
       
       <main className="section">
         <div className="shell">
-          <div className="portal-layout-grid">
-            <aside className="sidebar-box">
-              <div className="sidebar-card card-institutional">
-                <span className="section-tag">Academic Navigation</span>
-                <ul className="footer-link-list">
-                  {academicLinks.map((item) => (
-                    <li key={item.label} className="text-link" style={{ fontSize: '0.9rem' }}>• {item.label}</li>
+          <div className={styles.layoutGrid}>
+            <aside>
+              <div className={styles.sidebarCard}>
+                <span className={styles.sidebarTitle}>Academic Navigation</span>
+                <ul className={styles.linkList}>
+                  {sidebarLinks.map((item) => (
+                    <li key={item.label}>
+                      <Link href={item.href} className={styles.linkItem}>
+                        {item.label}
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               </div>
             </aside>
 
-            <div className="portal-main">
-              <div className="stacked-sections">
-                <article className="content-card-block card-institutional">
-                  <h2>Institutional Narrative</h2>
-                  <p className="principal-lead">{institutionalProfile.about}</p>
-                  <p className="muted">{institutionalProfile.websiteNorms}</p>
+            <div className={styles.mainContent}>
+              <article className={styles.narrativeCard}>
+                <h2 className={styles.sectionTitle}>Institutional Narrative</h2>
+                <p className={styles.leadText}>{institutionalProfile.about}</p>
+                <p className={styles.subText}>{institutionalProfile.websiteNorms}</p>
+              </article>
+
+              <div className={styles.visionMissionGrid}>
+                <article className={styles.vmCard} style={{ borderLeft: '4px solid var(--accent)' }}>
+                  <div className={styles.vmIcon}>👁️</div>
+                  <h3 className={styles.vmTitle}>Institutional Vision</h3>
+                  <p className={styles.visionText}>"{institutionalProfile.vision}"</p>
                 </article>
-
-                <div className="grid-res-2 margin-top">
-                  <article className="card card-institutional" style={{ borderLeft: '4px solid var(--accent)' }}>
-                    <h3 style={{ color: 'var(--primary)' }}>Institutional Vision</h3>
-                    <p style={{ fontStyle: 'italic' }}>"{institutionalProfile.vision}"</p>
-                  </article>
-                  <article className="card card-institutional" style={{ borderLeft: '4px solid var(--primary)' }}>
-                    <h3 style={{ color: 'var(--primary)' }}>Institutional Mission</h3>
-                    <p>{institutionalProfile.mission}</p>
-                  </article>
-                  <article className="card card-institutional" style={{ gridColumn: '1 / -1' }}>
-                    <h3 style={{ color: 'var(--primary)' }}>Statutory Identity & Accreditation</h3>
-                    <p style={{ fontWeight: 600 }}>
-                      {institutionalProfile.status} | {institutionalProfile.approvals}
-                    </p>
-                    <p className="muted" style={{ marginTop: '0.5rem' }}>
-                      Operational Campus: {institutionalProfile.location}
-                    </p>
-                  </article>
-                </div>
-
-                <article className="content-card-block card-institutional margin-top-xl">
-                  <h2>Governance & Academic Divisions</h2>
-                  <div className="grid-res-2 margin-top">
-                    {institutionalDirectory.map((item) => (
-                      <article className="card-minimal" key={item.title}>
-                        <h3 className="faculty-name" style={{ margin: 0 }}>{item.title}</h3>
-                        <p className="muted" style={{ fontSize: '0.85rem' }}>{item.description}</p>
-                      </article>
-                    ))}
+                <article className={styles.vmCard} style={{ borderLeft: '4px solid var(--primary-deep)' }}>
+                  <div className={styles.vmIcon}>🎯</div>
+                  <h3 className={styles.vmTitle}>Institutional Mission</h3>
+                  <p className={styles.missionText}>{institutionalProfile.mission}</p>
+                </article>
+                <article className={styles.identityCard}>
+                  <h3 className={styles.identityTitle}>Statutory Identity & Accreditation</h3>
+                  <div className={styles.identityMain}>
+                    <span>{institutionalProfile.status}</span>
+                    <span className={styles.identityDivider}>|</span>
+                    <span>{institutionalProfile.approvals}</span>
                   </div>
+                  <p className={styles.identityLocation}>
+                    Operational Campus: {institutionalProfile.location}
+                  </p>
                 </article>
               </div>
+
+              <article className={styles.narrativeCard}>
+                <h2 className={styles.sectionTitle}>Governance & Academic Divisions</h2>
+                <div className={styles.divisionsGrid}>
+                  {institutionalDirectory.map((item) => (
+                    <div className={styles.divisionCard} key={item.title}>
+                      <h3 className={styles.divisionTitle}>{item.title}</h3>
+                      <p className={styles.divisionDesc}>{item.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </article>
             </div>
           </div>
         </div>
