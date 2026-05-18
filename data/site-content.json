@@ -191,10 +191,10 @@
       "detail": "Vice Chancellor, JNTU-GV"
     },
     {
-      "role": "Registrar",
+      "role": "Registrar  (i/c)",
       "image": "https://jntugv.edu.in/static/media/registrar_new.4be86c91745d5166c94c.jpeg",
       "name": "Prof. D. Rajya Lakshmi",
-      "detail": "Registrar, JNTU-GV"
+      "detail": "Registrar (i/c), JNTU-GV"
     }
   ],
   "contactInventory": [
@@ -327,11 +327,6 @@
       "title": "Academic Syllabus: B.Pharm",
       "file": "/downloads/Syllabus_B_Pharm.pdf",
       "description": "Standardized academic curriculum for the Bachelor of Pharmacy program (PCI compliant)."
-    },
-    {
-      "title": "JNTU-GV PCI APPROVAL 2025-26",
-      "file": "/downloads/JNTU-GV PCI APPROVAL 2025-26.pdf",
-      "description": "Official Pharmacy Council of India (PCI) Approval document for the academic year 2025-26."
     }
   ],
   "institutionalGallery": [
